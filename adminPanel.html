@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Kurs qo‘shish</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e2e1e1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            width: 600px;
+            box-shadow: 0 0 20px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Admin Panel</h1>
+        <form id="addProductForm">
+            <label for="name">Ism kiriting</label>
+            <input type="text" class="form-control" id="name" placeholder="name..." required><br>
+
+            <label for="picture">Rasm Linkini Kiriting</label>
+            <input type="text" class="form-control" id="picture" placeholder="https://..."><br>
+
+            <label for="upload">Yoki Device’dan Yuklash</label>
+            <input type="file" class="form-control" id="upload" accept="image/*"><br>
+
+            <label for="course">Kursni tanlang</label>
+            <select id="course" class="form-select">
+                <option value="Kompyuter Savodxonligi">Kompyuter Savodxonligi</option>
+                <option value="Front End">Front End</option>
+                <option value="Back End">Back End</option>
+                <option value="3Ds Max">3Ds Max</option>
+                <option value="AutoCad">AutoCad</option>
+            </select><br>
+
+            <button type="submit" class="btn btn-primary w-100" id="sendBtn">Kurs qo‘shish</button>
+        </form>
+
+        <a href="indexAdmin.html" class="btn btn-success w-100 mt-3">Barcha kurslarni ko‘rish</a>
+        <a href="index.html" class="btn btn-secondary w-100 mt-2">Asosiy sahifaga qaytish</a>
+    </div>
+
+    <script src="dbadmin.js"></script>
+    <script src="adminPanel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

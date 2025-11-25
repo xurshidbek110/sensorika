@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O‘quvchi haqida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+            background-color: #f4f4f4;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+
+        header {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 80px;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 100;
+        }
+
+        .search-box {
+            position: relative;
+            width: 350px;
+
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 10px;
+            top: 35%;
+            cursor: pointer;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 10px 10px 35px;
+            border-radius: 5px;
+            border: none;
+            background-color: #f4f4f4;
+            transition: all 0.3s ease;
+
+        }
+        .search-box input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1250px;
+        }
+
+        .first-part {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .last-part {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        button {
+            text-transform: capitalize;
+            padding: 5px 10px;
+            border: none;
+            background-color: rgb(230, 57, 57);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.1s ease;
+        }
+
+        button:active {
+            transform: scale(0.95);
+            background-color: rgb(171, 47, 47);
+        }
+
+        main {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 1370px;
+            padding: 20px;
+            align-items: center;
+            /* border-bottom: 1px solid black; */
+        }
+
+        main p {
+            font-size: 32px;
+            font-weight: lighter;
+        }
+
+        main button {
+            height: 30px;
+            align-self: center;
+            font-size: 14px;
+            background-color: blue;
+            opacity: 0.5;
+        }
+
+        main button:hover {
+            background-color: rgb(0, 0, 235);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        main button:active {
+            transform: scale(0.95);
+            background-color: rgb(0, 0, 171);
+        }
+
+        #panel {
+            border: none;
+            background-color: white;
+            color: black;
+            font-size: 20px;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+        #panel:hover {
+            background-color: white;
+            box-shadow: none;
+            transform: none;
+            color: blue;
+        }
+
+        .canva-btn-large {
+            text-align: start;
+            font-size: large;
+            border: 1px solid black;
+            background-color: rgb(75, 75, 75);
+            width: 100%;
+            margin-bottom: 10px;
+            height: 40px;
+            transition: all 0.1s ease;
+        }
+
+        .canva-btn-large:hover {
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+
+        .canva-btn-large:active {
+            transform: scale(0.98);
+            background-color: rgb(70, 70, 70);
+        }
+
+        .gridd {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .canva-btn {
+            text-align: start;
+            font-size: medium;
+            border: 1px solid black;
+            background-color: rgb(75, 75, 75);
+            width: 100%;
+            height: 40px;
+            transition: all 0.1s ease;
+        }
+
+        .canva-btn:hover {
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+
+        .canva-btn:active {
+            transform: scale(0.98);
+            background-color: rgb(70, 70, 70);
+        }
+
+        .triple {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .canva-btn1 {
+            border: 1px solid black;
+            background-color: rgb(75, 75, 75);
+            width: 100%;
+            height: 40px;
+            transition: all 0.1s ease;
+        }
+
+        .canva-btn1:hover {
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+
+        .canva-btn1:active {
+            transform: scale(0.98);
+            background-color: rgb(70, 70, 70);
+        }
+        .canva-btn-last {
+            text-align: start;
+            font-size: large;
+            border: 1px solid black;
+            background-color: rgb(75, 75, 75);
+            width: 50%;
+            height: 40px;
+            transition: all 0.1s ease;
+        }
+        .canva-btn-last:hover {
+            background-color: rgb(90, 90, 90);
+            color: white;
+        }
+        .canva-btn-last:active {
+            transform: scale(0.98);
+            background-color: rgb(70, 70, 70);
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 15vh auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 400px;
+            height: 400px;
+        }
+        .ism{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .kurs{
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        header img{
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+        .container img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+  </style>
+</head>
+
+<body>
+  <header>
+        <button id="panel" class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+            aria-labelledby="staticBackdropLabel" style="width: 350px; background-color: rgb(50, 50, 50);">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="staticBackdropLabel" style="color: #eee;">Sensorika Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div>
+                    <button class="canva-btn-large">O'QUV KURSLARIGA YOZILISH</button>
+                    <button class="canva-btn-large">Faxrli o'quvchilar</button>
+                    <button class="canva-btn-large">Kompyuter savodxonligi</button>
+                    <div class="gridd">
+                        <button class="canva-btn">Front End</button>
+                        <button class="canva-btn">Back End</button>
+                    </div>
+                    <div class="triple">
+                        <button class="canva-btn1">Python</button>
+                        <button class="canva-btn1">3Ds Max</button>
+                        <button class="canva-btn1">AutoCad</button>
+                    </div>
+
+                    <button class="canva-btn-large">Data science</button>
+                    <button class="canva-btn-large">Social Media Marketing</button>
+
+                    <div class="triple">
+                        <button class="canva-btn1">Yangiliklar</button>
+                        <button class="canva-btn1">Media</button>
+                        <button class="canva-btn1">Marketing</button>
+                    </div>
+                    <button class="canva-btn-large">Bepul Ta'lim</button>
+                    <button class="canva-btn-large">Ma'lumotlar bazasi</button>
+                    <a href="login.html"><button class="canva-btn-last">Shaxsiy Kabinet</button></a><br><br>
+                    <a href="adminLogin.html"><button class="canva-btn-last">Admin Panel</button></a>
+
+                </div>
+            </div>
+        </div>
+
+         <div class="header-content">
+            <div class="first-part">
+            <a href="index.html"><img src="https://sensorika.uz/templates/Default/images/logo.png" alt=""></a>
+
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Qidirish...">
+            </div>
+        </div>
+
+        <div class="last-part">
+            <a href="register.html"><button>Register</button></a>
+            <a href="login.html"><button>Shaxsiy Kabinet</button></a>
+            <a href="adminLogin.html"><button>Admin Panel</button></a>
+        </div>
+        </div>
+    </header>
+    <!-- box -->
+    <div class="container">
+        <img class="image" width="200px" src="" alt="">
+        <h1 class="ism"></h1>
+        <p class="kurs"></p>
+    </div>
+
+  <script src="db.js"></script>
+  <script src="dbadmin.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let urlParams = new URLSearchParams(window.location.search);
+      let id = urlParams.get("id");
+      let products = JSON.parse(localStorage.getItem("Products")) || [];
+      let allData = [...Students, ...products];
+
+      let item = allData.find(i => i.id == id);
+
+      document.querySelector(".image").src = item.rasm || item.picture;
+      document.querySelector(".ism").textContent = item.name;
+      document.querySelector(".kurs").textContent = item.kurs;
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
